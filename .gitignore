@@ -28,4 +28,15 @@ bin/
 ### Mac OS ###
 .DS_Store
 
-.idea
+# IntelliJ
+.idea/
+*.iml
+
+# Gradle
+.gradle/
+build/
+gradle/
+
+# Gradle Wrapper
+gradlew
+gradlew.bat
