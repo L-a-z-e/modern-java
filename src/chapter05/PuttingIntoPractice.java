@@ -23,14 +23,14 @@ public class PuttingIntoPractice {
         transactions.stream()
                 .filter(transaction -> transaction.getYear() == 2011)
                 .sorted((t1, t2) -> t1.getValue() - t2.getValue())
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(System.out::println);
         System.out.println("------");
         // 질의 2: 거래자가 근무하는 모든 고유 도시는?
         transactions.stream()
                 .map(transaction ->  transaction.getTrader().getCity())
                 .distinct()
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(System.out::println);
         System.out.println("------");
         // 질의 3: Cambridge의 모든 거래자를 찾아 이름으로 정렬.
@@ -39,7 +39,7 @@ public class PuttingIntoPractice {
                 .map(transaction -> transaction.getTrader().getName())
                 .sorted(String::compareTo)
                 .distinct()
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(System.out::println);
         System.out.println("-------");
         // 질의 4: 알파벳 순으로 정렬된 모든 거래자의 이름 문자열을 반환

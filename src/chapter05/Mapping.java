@@ -11,7 +11,7 @@ public class Mapping {
         List<String> dishList = Dish.menu
                 .stream()
                 .map(Dish::getName)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("dishList");
         dishList.forEach(System.out::println);
@@ -21,7 +21,7 @@ public class Mapping {
 
         List<Integer> wordsLength = words.stream()
                 .map(String::length)
-                .collect(Collectors.toList());
+                .toList();
 
         System.out.println("wordsLength");
         System.out.println(wordsLength);
@@ -40,7 +40,7 @@ public class Mapping {
         List<int[]> pairs = numbers1.stream()
                 .flatMap(i -> numbers2.stream().map(j -> new int[]{i, j}))
                 .filter(pair -> (pair[0] + pair[1]) % 3 == 0)
-                .collect(Collectors.toList());
+                .toList();
 
         pairs.forEach(pair -> System.out.printf("(%d, %d)", pair[0], pair[1]));
 

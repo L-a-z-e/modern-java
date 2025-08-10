@@ -27,21 +27,21 @@ public class Filtering {
         System.out.println("filtering calories < 320");
         specialMenu.stream()
                 .filter(dish -> dish.getCalories() < 320)
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(System.out::println);
 
         // takeWhile 처음부터 조건이 처음으로 false가 되는 부분 전까지 유지
         System.out.println("takeWhile calories < 320");
         specialMenu.stream()
                 .takeWhile(dish -> dish.getCalories() < 320)
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(System.out::println);
 
         // dropWhile: 처음부터 조건이 true인 항목은 모두 버리고, 조건이 처음 false가 되는 그 지점부터 끝까지 유지
         System.out.println("dropWhile calories < 320");
         specialMenu.stream()
                 .dropWhile(dish -> dish.getCalories() < 320)
-                .collect(Collectors.toList())
+                .toList()
                 .forEach(System.out::println);
 
         System.out.println("limit 3");

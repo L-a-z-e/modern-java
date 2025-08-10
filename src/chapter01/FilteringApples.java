@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class FilterlingApples {
+public class FilteringApples {
     public static void main(String[] args) {
         List<Apple> inventory = Arrays.asList(
                 new Apple(80, "green"),
@@ -12,8 +12,8 @@ public class FilterlingApples {
                 new Apple(120, "red")
         );
 
-        System.out.println(filterApples(inventory, FilterlingApples::isHeavyApple));
-        System.out.println(filterApples(inventory, FilterlingApples::isGreenApple));
+        System.out.println(filterApples(inventory, FilteringApples::isHeavyApple));
+        System.out.println(filterApples(inventory, FilteringApples::isGreenApple));
         System.out.println(filterApples(inventory,(Apple a) -> "green".equals(a.getColor())));
         System.out.println(filterApples(inventory, (Apple a) -> a.getColor().equals("red") || a.getWeight() < 150));
 
